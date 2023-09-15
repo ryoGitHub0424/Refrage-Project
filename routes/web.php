@@ -14,9 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// Front Page
 Route::get('/', function () {
-    return view('welcome');
+    return view('front');
 });
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -29,3 +35,5 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+
