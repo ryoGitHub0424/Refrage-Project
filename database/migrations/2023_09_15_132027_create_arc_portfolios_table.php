@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('arc_portfolios', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->string('title')->nullable();
+            $table->string('thumbnail')->nullable();
+            $table->string('file')->nullable();
+            $table->string('concept')->nullable();
             $table->timestamps();
         });
     }
