@@ -15,6 +15,14 @@ return new class extends Migration
     {
         Schema::create('art_references', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->string('art_name')->nullable();
+            $table->string('artist_name')->nullable();
+            $table->string('year')->nullable();
+            $table->string('location')->nullable();
+            $table->string('medium')->nullable();
+            $table->string('image')->nullable();
+            $table->longText('overview')->nullable();
             $table->timestamps();
         });
     }

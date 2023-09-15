@@ -15,6 +15,14 @@ return new class extends Migration
     {
         Schema::create('arc_references', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->string('architecture_name')->nullable();
+            $table->string('architect_name')->nullable();
+            $table->string('year')->nullable();
+            $table->string('location')->nullable();
+            $table->string('how')->nullable();
+            $table->string('image')->nullable();
+            $table->longText('overview')->nullable();
             $table->timestamps();
         });
     }
