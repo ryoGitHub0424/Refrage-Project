@@ -15,4 +15,10 @@ class ShowController extends Controller
             ]);
     }
     
+    public function loggedPage() {
+        return view('logged_page', [
+            'arcPortfolios' => ArcPortfolio::latest()->simplePaginate(3),
+            'artPortfolios' => ArtPortfolio::latest()->simplePaginate(3),
+            ]);
+    }
 }
