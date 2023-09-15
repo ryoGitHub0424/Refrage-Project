@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ShowController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +20,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // Front Page
-Route::get('/', function () {
-    return view('front');
-});
+Route::get('/', [ShowController::class, 'showFront']);
 
 
 Route::get('/dashboard', function () {
@@ -35,5 +34,31 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+/* --------------------------------
+
+    ARCHITECTURE REFERENCES
+
+---------------------------------*/
+
+/* --------------------------------
+
+    ART REFERENCES
+
+---------------------------------*/
+
+/* --------------------------------
+
+    ARCHITECTURE PORTFOLIO
+
+---------------------------------*/
+
+/* --------------------------------
+
+    ART PORTFOLIO
+
+---------------------------------*/
+
+
 
 
