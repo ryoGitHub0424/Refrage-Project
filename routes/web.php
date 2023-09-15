@@ -22,6 +22,9 @@ use App\Http\Controllers\ShowController;
 // Front Page
 Route::get('/', [ShowController::class, 'showFront']);
 
+// Logged page
+Route::get('/logged_page', [ShowController::class, 'loggedPage']);
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -34,6 +37,8 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+
 
 /* --------------------------------
 
