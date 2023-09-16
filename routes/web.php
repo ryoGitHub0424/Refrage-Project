@@ -5,6 +5,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShowController;
 use App\Http\Controllers\ArcrefController;
 use App\Http\Controllers\ArtrefController;
+use App\Http\Controllers\ArcportController;
+use App\Http\Controllers\ArtportController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -64,13 +68,15 @@ Route::get('/art_references', [ArtrefController::class, 'index']);
     ARCHITECTURE PORTFOLIO
 
 ---------------------------------*/
+Route::get('/architecture_portfolios', [ArcportController::class, 'index']);
+
 
 /* --------------------------------
 
     ART PORTFOLIO
 
 ---------------------------------*/
-
+Route::get('/art_portfolios', [ArtportController::class, 'index']);
 
 
 
