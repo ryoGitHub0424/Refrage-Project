@@ -18,7 +18,7 @@
     <header id="header">
       <div class="header-flex">
         <div class="header-flex-left">
-          <a class="title" href="/">Refrege</a>
+          <a class="title" href="/">Refrage</a>
         </div>
 
         <div class="header-flex-right">
