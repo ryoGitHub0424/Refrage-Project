@@ -1,0 +1,143 @@
+/* ------------------
+
+Responsive Design
+
+--------------------*/
+
+@media screen and (max-width: 767px) {
+
+  /* ------------------
+  
+  Front Page
+  
+  --------------------*/
+
+
+  #title-page {
+    display: block;
+    text-align: center;
+    margin-top: 200px;
+  }
+
+  .title-page-left {
+    width: 100%;
+  }
+
+  .title-page-right {
+    width: 100%;
+  }
+
+  .big-title {
+    text-align: center;
+    font-size: 8.5rem;
+  }
+
+  .target-exp1 {
+    transform: rotate(-3deg);
+    font-size: 2.5rem;
+  }
+  .target-exp2 {
+    transform: rotate(3deg);
+    font-size: 2.5rem;
+    margin-top: 30px;
+  }
+
+  .account-btn-container {
+    margin-left: 0px;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+
+  .account-btn-container .button {
+    width: auto;
+  }
+
+  /* ------------------
+  
+  Logged Page
+  
+  --------------------*/
+
+  .welcome-container {
+    display: block;
+    margin-left: 0;
+    margin-bottom: 100px;
+  }
+  .welcome-message {
+    font-size: 6rem;
+    margin-left: 0;
+    text-align: center;
+    transform: rotate(-5deg);
+  }
+
+  .welcome-message {
+    width: 100%;
+  }
+
+  .welcome-category-container {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 100px;
+  }
+
+  /* ------------------
+  
+  Information
+  
+  --------------------*/
+  .info-flex {
+    display: block;
+  }
+
+  .info-container {
+    width: 100%;
+  }
+
+  /* ------------------
+  
+  Reference
+  
+  --------------------*/
+
+  .references {
+    grid-template-columns: 1fr;
+  }
+
+  /* ------------------
+  
+  Register form
+  
+  --------------------*/
+
+  .form-item {
+    width:400px;
+  }
+
+  .form-item label {
+    font-size: 1.25rem;
+  }
+
+  .form-item input{
+    margin-right: 30px;
+  }
+
+  /* ------------------
+
+  Organization
+
+--------------------*/
+  .welcome-message-org {
+    width: 100%;
+    margin-left: 0;
+    font-size: 6rem;
+    transform:rotate(-5deg)
+  }
+
+  .org-category-container {
+    /* width: 100%; */
+    margin-left: 0;
+    margin: 50px auto 0 auto;
+  }
+
+}
