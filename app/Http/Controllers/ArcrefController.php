@@ -12,4 +12,10 @@ class ArcrefController extends Controller
             'arcReferences' => ArcReference::all()
             ]);
     }
+    
+    public function show(ArcReference $arcReference) {
+        return view('reference.architecture.arc_ref_detail', [
+            'arcReference' => $arcReference
+            ]);
+    }
 }

@@ -53,6 +53,7 @@ require __DIR__.'/auth.php';
 ---------------------------------*/
 Route::get('/architecture_references', [ArcrefController::class, 'index']);
 
+Route::get('/architecture_references/{arcReference}', [ArcrefController::class, 'show']);
 
 /* --------------------------------
 
