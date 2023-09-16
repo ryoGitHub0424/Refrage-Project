@@ -18,4 +18,8 @@ class ArcrefController extends Controller
             'arcReference' => $arcReference
             ]);
     }
+    
+    public function create() {
+        return view('reference.architecture.arc_ref_add');
+    }
 }
