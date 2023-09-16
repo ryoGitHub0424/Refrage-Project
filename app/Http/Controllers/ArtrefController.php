@@ -12,4 +12,10 @@ class ArtrefController extends Controller
             'artReferences' => ArtReference::all()
             ]);
     }
+    
+    public function show(ArtReference $artReference) {
+        return view('reference.art.art_ref_detail',[
+            'artReference' => $artReference
+            ]);
+    }
 }

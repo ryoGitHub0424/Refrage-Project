@@ -9,7 +9,14 @@ class ArcportController extends Controller
 {
    public function index() {
        return view('portfolio.architecture.arc_port', [
-           'arcPortfolios' => ArcPortfolio::all(),
+           'arcPortfolios' => ArcPortfolio::all()
            ]);
    }
+   
+   public function show(ArcPortfolio $arcPortfolio) {
+       return view('portfolio.architecture.arc_port_detail', [
+           'arcPortfolio' => $arcPortfolio
+           ]);
+   }
+   
 }
