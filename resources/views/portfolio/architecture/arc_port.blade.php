@@ -20,7 +20,7 @@
           <div class="portfolio-item">
             <div class="portfolio-thumbnail">
               <img
-                src="{{$arcPortfolio->thumbnail ? asset('storage/' . $arcPortfolio->thumbnail) : asset('/images/house.jpg')}}"
+                src="{{asset('/images/ghiburi_house.jpg')}}"
                 alt="picture"
               />
             </div>

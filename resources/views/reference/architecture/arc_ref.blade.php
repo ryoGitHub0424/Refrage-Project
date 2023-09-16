@@ -18,7 +18,7 @@
         <div class="reference-item">
           <a href="/architecture_references/{{$arcReference->id}}" class="thumbnail-pic">
             <img
-              src="{{$arcReference->image ? asset('storage/' . $arcReference->image) : asset('/images/house.jpg')}}"
+              src="{{asset('/images/ghiburi_house.jpg')}}"
               alt="architectureImg"
             />
           </a>
