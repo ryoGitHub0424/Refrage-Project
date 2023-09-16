@@ -18,4 +18,8 @@ class ArtportController extends Controller
             'artPortfolio' => $artPortfolio
             ]);
     }
+    
+    public function create() {
+        return view('portfolio.art.art_port_add');
+    }
 }

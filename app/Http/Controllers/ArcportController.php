@@ -19,4 +19,8 @@ class ArcportController extends Controller
            ]);
    }
    
+   public function create() {
+       return view('portfolio.architecture.arc_port_add');
+   }
+   
 }

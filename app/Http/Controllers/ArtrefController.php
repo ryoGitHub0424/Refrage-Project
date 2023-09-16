@@ -18,4 +18,8 @@ class ArtrefController extends Controller
             'artReference' => $artReference
             ]);
     }
+    
+    public function create() {
+        return view('reference.art.art_ref_add');
+    }
 }
