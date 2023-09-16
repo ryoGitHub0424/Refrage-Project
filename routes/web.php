@@ -62,6 +62,8 @@ Route::get('/architecture_references/{arcReference}', [ArcrefController::class, 
 ---------------------------------*/
 Route::get('/art_references', [ArtrefController::class, 'index']);
 
+Route::get('/art_references/{artReference}', [ArtrefController::class, 'show']);
+
 
 
 /* --------------------------------
@@ -71,6 +73,8 @@ Route::get('/art_references', [ArtrefController::class, 'index']);
 ---------------------------------*/
 Route::get('/architecture_portfolios', [ArcportController::class, 'index']);
 
+Route::get('/architecture_portfolios/{arcPortfolio}', [ArcportController::class, 'show']);
+
 
 /* --------------------------------
 
@@ -78,6 +82,8 @@ Route::get('/architecture_portfolios', [ArcportController::class, 'index']);
 
 ---------------------------------*/
 Route::get('/art_portfolios', [ArtportController::class, 'index']);
+
+Route::get('/art_portfolios/{arcPortfolio}', [ArtportController::class, 'show']);
 
 
 

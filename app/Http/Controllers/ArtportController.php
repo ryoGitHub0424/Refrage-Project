@@ -9,7 +9,13 @@ class ArtportController extends Controller
 {
     public function index() {
         return view('portfolio.art.art_port', [
-            'artPortfolios' => ArtPortfolio::all()
+            'artPortfolios' => ArtPortfolio::latest()->get()
+            ]);
+    }
+    
+    public function show(ArtPortfolio $artPortfolio) {
+        return view('portfolio.art.art_port_detail', [
+            'artPortfolio' => $artPortfolio
             ]);
     }
 }
