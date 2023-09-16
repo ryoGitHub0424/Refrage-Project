@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('arc_references', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            // $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('architecture_name')->nullable();
             $table->string('architect_name')->nullable();
             $table->string('year')->nullable();

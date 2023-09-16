@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class ArcReference extends Model
 {
     use HasFactory;
+    
+    protected $fillable = ['architecture_name', 'architect_name', 'year', 'location', 'how', 'image', 'overview'];
 }
