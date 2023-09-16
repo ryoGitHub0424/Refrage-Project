@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShowController;
 use App\Http\Controllers\ArcrefController;
+use App\Http\Controllers\ArtrefController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,6 +55,9 @@ Route::get('/architecture_references', [ArcrefController::class, 'index']);
     ART REFERENCES
 
 ---------------------------------*/
+Route::get('/art_references', [ArtrefController::class, 'index']);
+
+
 
 /* --------------------------------
 
