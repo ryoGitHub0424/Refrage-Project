@@ -55,6 +55,8 @@ Route::get('/architecture_references', [ArcrefController::class, 'index']);
 
 Route::get('/architecture_references/create', [ArcrefController::class, 'create']);
 
+Route::post('/architecture_references', [ArcrefController::class, 'store']);
+
 Route::get('/architecture_references/{arcReference}', [ArcrefController::class, 'show']);
 
 /* --------------------------------

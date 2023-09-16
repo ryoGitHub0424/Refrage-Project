@@ -22,7 +22,7 @@ class ArtReferenceFactory extends Factory
             'year' => '1889',
             'location' => 'Museum of Modern Art',
             'medium' => 'Oil on canvas',
-            'image' => 'images/ghiburi_house.jpg',
+            'image' => 'images/YGvcBSMDUszjAagUSG1w7nEIDkUdd214vmOsysMp.jpg',
             'overview' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet sapiente praesentium recusandae a ipsam quidem debitis quibusdam repellat in accusantium?',
         ];
     }
