@@ -22,7 +22,7 @@ class ArcReferenceFactory extends Factory
             'year' => '1988',
             'location' => 'Switzerland',
             'how' => 'Concrete, Galvaniun',
-            'image' => '/images/ghiburi_house.jpg',
+            'image' => 'images/YGvcBSMDUszjAagUSG1w7nEIDkUdd214vmOsysMp.jpg',
             'overview' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet sapiente praesentium recusandae a ipsam quidem debitis quibusdam repellat in accusantium?',
         ];
     }
