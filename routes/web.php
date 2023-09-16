@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShowController;
+use App\Http\Controllers\ArcrefController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,6 +46,8 @@ require __DIR__.'/auth.php';
     ARCHITECTURE REFERENCES
 
 ---------------------------------*/
+Route::get('/architecture_references', [ArcrefController::class, 'index']);
+
 
 /* --------------------------------
 
