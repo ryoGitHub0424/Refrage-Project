@@ -20,7 +20,7 @@
           <div class="portfolio-item">
             <div class="portfolio-thumbnail">
               <img
-                src="{{asset('/images/ghiburi_house.jpg')}}"
+                src="{{$artPortfolio->thumbnail ? asset('storage/' . $artPortfolio->thumbnail) : asset('image/ghiburi_house.jpg')}}"
                 alt="picture"
               />
             </div>

@@ -23,4 +23,21 @@ class ArcportController extends Controller
        return view('portfolio.architecture.arc_port_add');
    }
    
+   public function store(Request $request) {
+       $formFields = $request->validate([
+            'title' => 'required',
+            'thumbnail' => 'required',
+            'file' => 'required',
+            'concept' => 'required',
+        ]);
+
+        if ($request->hasFile('thumbnail')) {
+            $formFields['thumbnail'] = $request->file('thumbnail')->store('thumbnails', 'public');
+        }
+        
+        ArcPortfolio::create($formFields);
+        
+        return redirect('/architecture_portfolios');
+   }
+   
 }
