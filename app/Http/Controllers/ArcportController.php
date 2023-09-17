@@ -46,4 +46,21 @@ class ArcportController extends Controller
            ]);
    }
    
+   public function update(Request $request, ArcPortfolio $arcPortfolio) {
+        $formFields = $request->validate([
+            'title' => 'required',
+            'thumbnail' => 'required',
+            'file' => 'required',
+            'concept' => 'required',
+        ]);
+
+        if ($request->hasFile('thumbnail')) {
+            $formFields['thumbnail'] = $request->file('thumbnail')->store('thumbnails', 'public');
+        }
+
+        $arcPortfolio->update($formFields);
+
+        return redirect('/architecture_portfolios');
+   }
+   
 }

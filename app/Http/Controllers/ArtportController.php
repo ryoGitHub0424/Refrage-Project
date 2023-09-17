@@ -45,4 +45,21 @@ class ArtportController extends Controller
             'artPortfolio' => $artPortfolio
             ]);
     }
+    
+    public function update(Request $request, ArtPortfolio $artPortfolio) {
+        $formFields = $request->validate([
+            'title' => 'required',
+            'thumbnail' => 'required',
+            'file' => 'required',
+            'concept' => 'required',
+        ]);
+
+        if ($request->hasFile('thumbnail')) {
+            $formFields['thumbnail'] = $request->file('thumbnail')->store('thumbnails', 'public');
+        }
+
+        $artPortfolio->update($formFields);
+
+        return redirect('/art_portfolios');
+    }
 }
