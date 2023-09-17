@@ -66,4 +66,9 @@ class ArtrefController extends Controller
 
         return redirect('/art_references');
     }
+    
+    public function destroy(ArtReference $artReference) {
+        $artReference->delete();
+        return redirect('/art_references');
+    }
 }

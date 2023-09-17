@@ -63,4 +63,9 @@ class ArcportController extends Controller
         return redirect('/architecture_portfolios');
    }
    
+   public function destroy(ArcPortfolio $arcPortfolio) {
+       $arcPortfolio->delete();
+       return redirect('/architecture_portfolios');
+   }
+   
 }
