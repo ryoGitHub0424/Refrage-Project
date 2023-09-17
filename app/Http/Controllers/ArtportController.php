@@ -62,4 +62,9 @@ class ArtportController extends Controller
 
         return redirect('/art_portfolios');
     }
+    
+    public function destroy(ArtPortfolio $artPortfolio) {
+        $artPortfolio->delete();
+        return redirect('/art_portfolios');
+    }
 }

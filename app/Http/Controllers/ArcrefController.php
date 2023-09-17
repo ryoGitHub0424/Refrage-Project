@@ -66,4 +66,9 @@ class ArcrefController extends Controller
 
         return redirect('/architecture_references');
     }
+    
+    public function destroy(ArcReference $arcReference) {
+        $arcReference->delete();
+        return redirect('/architecture_references');
+    }
 }
