@@ -41,4 +41,10 @@ class ArcrefController extends Controller
         
         return redirect('/architecture_references')->with('message', 'new reference is created!');
     }
+    
+    public function edit(ArcReference $arcReference) {
+        return view('reference.architecture.arc_ref_edit', [
+            'arcReference' => $arcReference
+            ]);
+    }
 }

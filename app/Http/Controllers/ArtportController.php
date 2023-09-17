@@ -39,4 +39,10 @@ class ArtportController extends Controller
         
         return redirect('/art_portfolios');
     }
+    
+    public function edit(ArtPortfolio $artPortfolio) {
+        return view('portfolio.art.art_port_edit', [
+            'artPortfolio' => $artPortfolio
+            ]);
+    }
 }

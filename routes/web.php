@@ -57,6 +57,8 @@ Route::get('/architecture_references/create', [ArcrefController::class, 'create'
 
 Route::post('/architecture_references', [ArcrefController::class, 'store']);
 
+Route::get('/architecture_references/{arcReference}/edit', [ArcrefController::class, 'edit']);
+
 Route::get('/architecture_references/{arcReference}', [ArcrefController::class, 'show']);
 
 /* --------------------------------
@@ -69,6 +71,8 @@ Route::get('/art_references', [ArtrefController::class, 'index']);
 Route::get('/art_references/create', [ArtrefController::class, 'create']);
 
 Route::post('/art_references', [ArtrefController::class, 'store']);
+
+Route::get('/art_references/{artReference}/edit', [ArtrefController::class, 'edit']);
 
 Route::get('/art_references/{artReference}', [ArtrefController::class, 'show']);
 
@@ -85,6 +89,8 @@ Route::get('/architecture_portfolios/create', [ArcportController::class, 'create
 
 Route::post('/architecture_portfolios', [ArcportController::class, 'store']);
 
+Route::get('/architecture_portfolios/{arcPortfolio}/edit', [ArcportController::class, 'edit']);
+
 Route::get('/architecture_portfolios/{arcPortfolio}', [ArcportController::class, 'show']);
 
 
@@ -99,7 +105,9 @@ Route::get('/art_portfolios/create', [ArtportController::class, 'create']);
 
 Route::post('art_portfolios', [ArtportController::class, 'store']);
 
-Route::get('/art_portfolios/{arcPortfolio}', [ArtportController::class, 'show']);
+Route::get('art_portfolios/{artPortfolio}/edit', [ArtportController::class, 'edit']);
+
+Route::get('/art_portfolios/{artPortfolio}', [ArtportController::class, 'show']);
 
 
 
