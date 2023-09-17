@@ -7,7 +7,6 @@
         <div class="category-name">
           <p>Portfolio:Architecture/{{$arcPortfolio->title}} by </p>
         </div>
-        @auth
           <div class="short-detail-btns">
             <a href="/architecture_portfolios/{{$arcPortfolio->id}}/edit" class="button edit-btn"> edit </a>
             <form method="POST" action="/architecture_portfolios/{{$arcPortfolio->id}}" class="delete-form">
@@ -16,8 +15,6 @@
               <button class="button delete-btn"> delete </button>
             </form>
           </div>
-        @endauth
-        
       </div>
 
       <div class="detail-container">

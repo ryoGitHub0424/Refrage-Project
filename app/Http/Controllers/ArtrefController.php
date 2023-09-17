@@ -40,6 +40,11 @@ class ArtrefController extends Controller
         ArtReference::create($formFields);
         
         return redirect('art_references');
-
+    }
+    
+    public function edit(ArtReference $artReference) {
+        return view('reference.art.art_ref_edit', [
+            'artReference' => $artReference
+            ]);
     }
 }

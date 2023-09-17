@@ -40,4 +40,10 @@ class ArcportController extends Controller
         return redirect('/architecture_portfolios');
    }
    
+   public function edit(arcPortfolio $arcPortfolio) {
+       return view('portfolio.architecture.arc_port_edit', [
+           'arcPortfolio' => $arcPortfolio
+           ]);
+   }
+   
 }
