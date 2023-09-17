@@ -22,4 +22,24 @@ class ArtrefController extends Controller
     public function create() {
         return view('reference.art.art_ref_add');
     }
+    
+    public function store(Request $request) {
+        $formFields = $request->validate([
+            'art_name' => 'required',
+            'artist_name' => 'required',
+            'year' => 'required',
+            'location' => 'required',
+            'medium' => 'required',
+            'overview' => 'required',
+        ]);
+
+        if ($request->hasFile('image')) {
+            $formFields['image'] = $request->file('image')->store('images', 'public');
+        }
+        
+        ArtReference::create($formFields);
+        
+        return redirect('art_references');
+
+    }
 }

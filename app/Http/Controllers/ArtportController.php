@@ -22,4 +22,21 @@ class ArtportController extends Controller
     public function create() {
         return view('portfolio.art.art_port_add');
     }
+    
+    public function store(Request $request){
+        $formFields = $request->validate([
+            'title' => 'required',
+            'thumbnail' => 'required',
+            'file' => 'required',
+            'concept' => 'required',
+        ]);
+
+        if ($request->hasFile('thumbnail')) {
+            $formFields['thumbnail'] = $request->file('thumbnail')->store('thumbnails', 'public');
+        }
+        
+        ArtPortfolio::create($formFields);
+        
+        return redirect('/art_portfolios');
+    }
 }
