@@ -47,4 +47,23 @@ class ArtrefController extends Controller
             'artReference' => $artReference
             ]);
     }
+    
+    public function update(Request $request, ArtReference $artReference) {
+        $formFields = $request->validate([
+            'art_name' => 'required',
+            'artist_name' => 'required',
+            'year' => 'required',
+            'location' => 'required',
+            'medium' => 'required',
+            'overview' => 'required',
+        ]);
+
+        if ($request->hasFile('image')) {
+            $formFields['image'] = $request->file('image')->store('images', 'public');
+        }
+
+        $artReference->update($formFields);
+
+        return redirect('/art_references');
+    }
 }

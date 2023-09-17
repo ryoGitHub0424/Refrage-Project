@@ -47,4 +47,23 @@ class ArcrefController extends Controller
             'arcReference' => $arcReference
             ]);
     }
+    
+    public function update(Request $request, ArcReference $arcReference) {
+        $formFields = $request->validate([
+            'architecture_name' => 'required',
+            'architect_name' => 'required',
+            'year' => 'required',
+            'location' => 'required',
+            'how' => 'required',
+            'overview' => 'required',
+        ]);
+
+        if ($request->hasFile('image')) {
+            $formFields['image'] = $request->file('image')->store('images', 'public');
+        }
+
+        $arcReference->update($formFields);
+
+        return redirect('/architecture_references');
+    }
 }
