@@ -37,6 +37,8 @@ class ArtrefController extends Controller
             $formFields['image'] = $request->file('image')->store('images', 'public');
         }
         
+        $formFields['user_id'] = auth()->id();
+        
         ArtReference::create($formFields);
         
         return redirect('art_references');

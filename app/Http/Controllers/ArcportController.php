@@ -35,6 +35,8 @@ class ArcportController extends Controller
             $formFields['thumbnail'] = $request->file('thumbnail')->store('thumbnails', 'public');
         }
         
+        $formFields['user_id'] = auth()->id();
+        
         ArcPortfolio::create($formFields);
         
         return redirect('/architecture_portfolios');
