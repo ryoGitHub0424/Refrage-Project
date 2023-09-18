@@ -44,11 +44,6 @@
         </a>
         {{-- end of each portfolio --}}
         @endforeach
-        
-        <div class="pagination">
-          {{$arcPortfolios->links()}}
-        </div>
-
       </section>
     </main>
 

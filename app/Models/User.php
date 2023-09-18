@@ -48,18 +48,18 @@ class User extends Authenticatable
     
     // Relationship to each model
     public function arcReferences() {
-        $this->hasMany(ArcReference::class, 'user_id');
+        return $this->hasMany(ArcReference::class, 'user_id');
     }
     
-    public function artReference() {
-        $this->hasMany(ArtReference::class, 'user_id');
+    public function artReferences() {
+        return $this->hasMany(ArtReference::class, 'user_id');
     }
     
-    public function arcPortfolio() {
-        $this->hasMany(ArcPortfolio::class, 'user_id');
+    public function arcPortfolios() {
+        return $this->hasMany(ArcPortfolio::class, 'user_id');
     }
     
-    public function artPortfolio() {
-        $this->hasMany(ArtPortfolio::class, 'user_id');
+    public function artPortfolios() {
+        return $this->hasMany(ArtPortfolio::class, 'user_id');
     }
 }

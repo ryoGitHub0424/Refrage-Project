@@ -2,7 +2,7 @@
 
 @section('logged_content')
 <main class="main-wrapper">
-      <a href="/logged_page" class="button back-btn">Back</a>
+      <a href="/architecture_portfolios" class="button back-btn">Back</a>
       <div class="category-info">
         <div class="category-name">
           <p>Portfolio:Architecture/{{$arcPortfolio->title}} by </p>
