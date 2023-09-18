@@ -57,13 +57,10 @@
           <a href="/art_references">Ref:Art</a>
         </li>
         <li>
-          <a href="/architecture_portfolios">Portfolio:Architecture</a>
+          <a href="/architecture_portfolios">Port:Architecture</a>
         </li>
         <li>
-          <a href="/art_portfolios">Portfolio:Art</a>
-        </li>
-        <li>
-          <a href="/information">Information</a>
+          <a href="/art_portfolios">Port:Art</a>
         </li>
       </ul>
     </div>

@@ -26,6 +26,10 @@
         </div>
         {{-- end of each reference --}}
         @endforeach
+        
+        <div class="pagination-ref">
+          {{$artReferences->links()}}
+        </div>
 
       </div>
     </main>

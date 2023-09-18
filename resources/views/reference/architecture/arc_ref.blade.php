@@ -29,8 +29,11 @@
           </div>
         </div>
         @endforeach
-        
         {{-- end of each reference --}}
+        
+        <div class="pagination">
+          {{$arcReferences->links()}}
+        </div>
         
         
       </div>

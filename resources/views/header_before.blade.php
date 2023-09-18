@@ -52,7 +52,10 @@
           <a href="#portfolio">PORTFOLIO</a>
         </li>
         <li>
-          <a href="#information">INFORMATION</a>
+          <a href="/register">Register</a>
+        </li>
+        <li>
+          <a href="/login">Login</a>
         </li>
       </ul>
     </div>
