@@ -22,16 +22,18 @@ class DatabaseSeeder extends Seeder
             ]);
             
         \App\Models\ArcReference::factory(10)->create([
-            'user_id' => $user->id
+            'user_id' => $user->id,
             ]);
         \App\Models\ArtReference::factory(10)->create([
             'user_id' => $user->id
             ]);
         \App\Models\ArcPortfolio::factory(10)->create([
-            'user_id' => $user->id
+            'user_id' => $user->id,
+            'user_name' => $user->name
             ]);
         \App\Models\ArtPortfolio::factory(10)->create([
-            'user_id' => $user->id
+            'user_id' => $user->id,
+            'user_name' => $user->name
             ]);
         
 

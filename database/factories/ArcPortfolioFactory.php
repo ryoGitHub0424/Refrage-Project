@@ -18,7 +18,7 @@ class ArcPortfolioFactory extends Factory
     {
         return [
             'title' => 'untitled art',
-            'thumbnail' => '/images/ghiburi.jpg',
+            'thumbnail' => 'thumbnails/dxzsISFbcapx8GRxRzullcLVudArrfWEqQPASLFp.jpg',
             'file' => 'portfolio.pdf',
             'concept' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet sapiente praesentium recusandae a ipsam quidem debitis quibusdam repellat in accusantium?',
         ];

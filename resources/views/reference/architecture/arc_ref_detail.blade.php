@@ -7,6 +7,8 @@
         <div class="category-name">
           <p>Reference:Architecture/{{$arcReference->architecture_name}}</p>
         </div>
+        
+        @auth
         <div class="short-detail-btns">
           <a href="/architecture_references/{{$arcReference->id}}/edit" class="button edit-btn"> edit </a>
 
@@ -16,6 +18,8 @@
             <button class="button delete-btn"> delete </button>
           </form>
         </div>
+        
+        @endauth
       </div>
 
       <div class="detail-container">

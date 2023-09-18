@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('art_portfolios', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->string('user_name')->nullable();
             $table->string('title')->nullable();
             $table->string('thumbnail')->nullable();
             $table->string('file')->nullable();

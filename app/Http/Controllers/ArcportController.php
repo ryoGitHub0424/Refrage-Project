@@ -37,6 +37,8 @@ class ArcportController extends Controller
         
         $formFields['user_id'] = auth()->id();
         
+        $formFields['user_name'] = auth()->user()->name;
+        
         ArcPortfolio::create($formFields);
         
         return redirect('/architecture_portfolios');

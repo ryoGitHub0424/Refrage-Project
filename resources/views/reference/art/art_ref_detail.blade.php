@@ -7,6 +7,8 @@
         <div class="category-name">
           <p>Reference:Art/{{$artReference->art_name}}</p>
         </div>
+        
+        @auth
         <div class="short-detail-btns">
           <a href="/art_references/{{$artReference->id}}/edit" class="button edit-btn"> edit </a>
           <form method="POST" action="/art_references/{{$artReference->id}}" class="delete-form">
@@ -16,6 +18,7 @@
           </form>
         </div>
       </div>
+      @endauth
 
       <div class="detail-container">
         <div class="reference-thumbnail">

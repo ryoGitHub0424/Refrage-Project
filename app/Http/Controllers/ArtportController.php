@@ -9,7 +9,7 @@ class ArtportController extends Controller
 {
     public function index() {
         return view('portfolio.art.art_port', [
-            'artPortfolios' => auth()->user()->arcPortfolios()->get()
+            'artPortfolios' => auth()->user()->artPortfolios()->get()
             ]);
     }
     
@@ -36,6 +36,8 @@ class ArtportController extends Controller
         }
         
         $formFields['user_id'] = auth()->id();
+        
+        $formFields['user_name'] = auth()->user()->name;
         
         ArtPortfolio::create($formFields);
         

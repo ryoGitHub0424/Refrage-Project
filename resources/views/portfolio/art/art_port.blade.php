@@ -27,7 +27,7 @@
             <ul class="port-detail-list">
               <li>
                 <p>Account Name:</p>
-                <p>ryokaneko20010424</p>
+                <p>{{auth()->user()->name}}</p>
               </li>
               <li>
                 <p>Title:</p>
