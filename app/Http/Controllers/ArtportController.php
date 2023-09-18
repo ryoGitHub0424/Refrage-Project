@@ -35,6 +35,8 @@ class ArtportController extends Controller
             $formFields['thumbnail'] = $request->file('thumbnail')->store('thumbnails', 'public');
         }
         
+        $formFields['user_id'] = auth()->id();
+        
         ArtPortfolio::create($formFields);
         
         return redirect('/art_portfolios');

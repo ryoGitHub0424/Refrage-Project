@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\ArcReference;
+use App\Models\ArtReference;
+use App\Models\ArcPortfolio;
+use App\Models\ArtPortfolio;
 
 class User extends Authenticatable
 {
@@ -41,4 +45,21 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    
+    // Relationship to each model
+    public function arcReferences() {
+        $this->hasMany(ArcReference::class, 'user_id');
+    }
+    
+    public function artReference() {
+        $this->hasMany(ArtReference::class, 'user_id');
+    }
+    
+    public function arcPortfolio() {
+        $this->hasMany(ArcPortfolio::class, 'user_id');
+    }
+    
+    public function artPortfolio() {
+        $this->hasMany(ArtPortfolio::class, 'user_id');
+    }
 }

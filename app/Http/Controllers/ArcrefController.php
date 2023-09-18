@@ -37,6 +37,8 @@ class ArcrefController extends Controller
             $formFields['image'] = $request->file('image')->store('images', 'public');
         }
         
+        $formFields['user_id'] = auth()->id();
+        
         ArcReference::create($formFields);
         
         return redirect('/architecture_references')->with('message', 'new reference is created!');
