@@ -51,6 +51,11 @@ class ArtportController extends Controller
     }
     
     public function update(Request $request, ArtPortfolio $artPortfolio) {
+        // Make sure logged in user is owener
+        if ($artPortfolio->user_id != auth()->id()) {
+            abort(403, 'Unauthorized Action');
+        }
+        
         $formFields = $request->validate([
             'title' => 'required',
             'thumbnail' => 'required',
@@ -68,6 +73,10 @@ class ArtportController extends Controller
     }
     
     public function destroy(ArtPortfolio $artPortfolio) {
+        // Make sure logged in user is owener
+        if ($artPortfolio->user_id != auth()->id()) {
+            abort(403, 'Unauthorized Action');
+        }
         $artPortfolio->delete();
         return redirect('/art_portfolios');
     }
