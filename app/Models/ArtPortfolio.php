@@ -10,7 +10,7 @@ class ArtPortfolio extends Model
 {
     use HasFactory;
     
-    protected $fillable = ['user_id', 'title', 'thumbnail', 'file', 'concept'];
+    protected $fillable = ['user_id', 'user_name', 'title', 'thumbnail', 'file', 'concept'];
     
     public function user() {
         return $this->belongsTo(User::class, 'user_id');
