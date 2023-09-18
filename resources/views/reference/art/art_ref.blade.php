@@ -12,18 +12,18 @@
       <div class="references">
         @foreach ($artReferences as $artReference)
             {{-- each reference --}}
-        <div class="reference-item">
-          <a href="/art_references/{{$artReference->id}}" class="thumbnail-pic">
+        <a href="/art_references/{{$artReference->id}}" class="reference-item">
+          <div  class="thumbnail-pic">
             <img
               src="{{$artReference->image ? asset('storage/' . $artReference->image) : asset('image/ghiburi_house.jpg')}}"
               alt="artImg"
             />
-          </a>
+          </div>
           <div class="short-detail">
             <p>Art: {{$artReference->art_name}}</p>
             <p>Artist: {{$artReference->artist_name}}</p>
           </div>
-        </div>
+        </a>
         {{-- end of each reference --}}
         @endforeach
       </div>

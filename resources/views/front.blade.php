@@ -37,7 +37,7 @@
             <ul class="port-detail-list">
               <li>
                 <p>Account Name:</p>
-                <p></p>
+                <p>{{$artPortfolio->user_name}}</p>
               </li>
               <li>
                 <p>Title:</p>

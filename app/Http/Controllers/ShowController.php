@@ -11,7 +11,7 @@ class ShowController extends Controller
     public function showFront() {
         return view('front', [
             'arcPortfolios' => ArcPortfolio::latest()->take(3),
-            'artPortfolios' => ArtPortfolio::latest()->take(3),
+            'artPortfolios' => ArtPortfolio::all()->take(3),
             ]);
     }
     

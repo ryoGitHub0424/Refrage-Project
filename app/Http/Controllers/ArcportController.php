@@ -51,6 +51,11 @@ class ArcportController extends Controller
    }
    
    public function update(Request $request, ArcPortfolio $arcPortfolio) {
+       // Make sure logged in user is owener
+        if ($arcPortfolio->user_id != auth()->id()) {
+            abort(403, 'Unauthorized Action');
+        }
+       
         $formFields = $request->validate([
             'title' => 'required',
             'thumbnail' => 'required',
@@ -68,6 +73,10 @@ class ArcportController extends Controller
    }
    
    public function destroy(ArcPortfolio $arcPortfolio) {
+       // Make sure logged in user is owener
+        if ($arcPortfolio->user_id != auth()->id()) {
+            abort(403, 'Unauthorized Action');
+        }
        $arcPortfolio->delete();
        return redirect('/architecture_portfolios');
    }

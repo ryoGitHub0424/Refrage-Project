@@ -125,5 +125,3 @@ Route::delete('art_portfolios/{artPortfolio}', [ArtportController::class, 'destr
 
 Route::get('/art_portfolios/{artPortfolio}', [ArtportController::class, 'show'])->middleware('auth');
 
-
-
