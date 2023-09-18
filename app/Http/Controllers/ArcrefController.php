@@ -9,7 +9,7 @@ class ArcrefController extends Controller
 {
     public function index() {
         return view('reference.architecture.arc_ref', [
-            'arcReferences' => ArcReference::all()
+            'arcReferences' => ArcReference::latest()->simplePaginate(8)
             ]);
     }
     

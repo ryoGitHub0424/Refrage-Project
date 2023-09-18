@@ -45,6 +45,10 @@
 
         @endforeach
         
+        <div class="pagination">
+          {{$artPortfolios->links()}}
+        </div>
+        
         
       </section>
     </main>

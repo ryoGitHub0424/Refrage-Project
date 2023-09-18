@@ -9,7 +9,7 @@ class ArcportController extends Controller
 {
    public function index() {
        return view('portfolio.architecture.arc_port', [
-           'arcPortfolios' => ArcPortfolio::all()
+           'arcPortfolios' => ArcPortfolio::latest()->simplePaginate(8)
            ]);
    }
    

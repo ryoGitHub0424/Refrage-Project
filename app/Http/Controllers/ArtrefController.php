@@ -9,7 +9,7 @@ class ArtrefController extends Controller
 {
     public function index() {
         return view('reference.art.art_ref', [
-            'artReferences' => ArtReference::all()
+            'artReferences' => ArtReference::latest()->simplePaginate(8)
             ]);
     }
     
