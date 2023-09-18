@@ -9,7 +9,7 @@ class ArtportController extends Controller
 {
     public function index() {
         return view('portfolio.art.art_port', [
-            'artPortfolios' => ArtPortfolio::latest()->simplePaginate(8)
+            'artPortfolios' => auth()->user()->arcPortfolios()->get()
             ]);
     }
     

@@ -26,7 +26,7 @@
           <nav>
             <div class="user-name">
               <p>Welcome:</p>
-              <p></p>
+              <p>{{auth()->user()->name}}</p>
             </div>
             <li>
               <form method="POST" action="/logout">

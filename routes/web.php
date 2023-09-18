@@ -26,10 +26,10 @@ use App\Http\Controllers\ArtportController;
 // });
 
 // Front Page
-Route::get('/', [ShowController::class, 'showFront']);
+Route::get('/', [ShowController::class, 'showFront'])->middleware('guest');
 
 // Logged page
-Route::get('/logged_page', [ShowController::class, 'loggedPage']);
+Route::get('/logged_page', [ShowController::class, 'loggedPage'])->middleware('auth');
 
 
 Route::get('/dashboard', function () {
@@ -51,38 +51,38 @@ require __DIR__.'/auth.php';
     ARCHITECTURE REFERENCES
 
 ---------------------------------*/
-Route::get('/architecture_references', [ArcrefController::class, 'index']);
+Route::get('/architecture_references', [ArcrefController::class, 'index'])->middleware('auth');
 
-Route::get('/architecture_references/create', [ArcrefController::class, 'create']);
+Route::get('/architecture_references/create', [ArcrefController::class, 'create'])->middleware('auth');
 
 Route::post('/architecture_references', [ArcrefController::class, 'store']);
 
-Route::get('/architecture_references/{arcReference}/edit', [ArcrefController::class, 'edit']);
+Route::get('/architecture_references/{arcReference}/edit', [ArcrefController::class, 'edit'])->middleware('auth');
 
 Route::put('/architecture_references/{arcReference}', [ArcrefController::class, 'update']);
 
 Route::delete('/architecture_references/{arcReference}', [ArcrefController::class, 'destroy']);
 
-Route::get('/architecture_references/{arcReference}', [ArcrefController::class, 'show']);
+Route::get('/architecture_references/{arcReference}', [ArcrefController::class, 'show'])->middleware('auth');
 
 /* --------------------------------
 
     ART REFERENCES
 
 ---------------------------------*/
-Route::get('/art_references', [ArtrefController::class, 'index']);
+Route::get('/art_references', [ArtrefController::class, 'index'])->middleware('auth');
 
-Route::get('/art_references/create', [ArtrefController::class, 'create']);
+Route::get('/art_references/create', [ArtrefController::class, 'create'])->middleware('auth');
 
 Route::post('/art_references', [ArtrefController::class, 'store']);
 
-Route::get('/art_references/{artReference}/edit', [ArtrefController::class, 'edit']);
+Route::get('/art_references/{artReference}/edit', [ArtrefController::class, 'edit'])->middleware('auth');
 
 Route::put('/art_references/{artReference}', [ArtrefController::class, 'update']);
 
 Route::delete('art_references/{artReference}', [ArtrefController::class, 'destroy']);
 
-Route::get('/art_references/{artReference}', [ArtrefController::class, 'show']);
+Route::get('/art_references/{artReference}', [ArtrefController::class, 'show'])->middleware('auth');
 
 
 
@@ -91,19 +91,19 @@ Route::get('/art_references/{artReference}', [ArtrefController::class, 'show']);
     ARCHITECTURE PORTFOLIO
 
 ---------------------------------*/
-Route::get('/architecture_portfolios', [ArcportController::class, 'index']);
+Route::get('/architecture_portfolios', [ArcportController::class, 'index'])->middleware('auth');
 
-Route::get('/architecture_portfolios/create', [ArcportController::class, 'create']);
+Route::get('/architecture_portfolios/create', [ArcportController::class, 'create'])->middleware('auth');
 
 Route::post('/architecture_portfolios', [ArcportController::class, 'store']);
 
-Route::get('/architecture_portfolios/{arcPortfolio}/edit', [ArcportController::class, 'edit']);
+Route::get('/architecture_portfolios/{arcPortfolio}/edit', [ArcportController::class, 'edit'])->middleware('auth');
 
 Route::put('/architecture_portfolios/{arcPortfolio}', [ArcportController::class, 'update']);
 
 Route::delete('/architecture_portfolios/{arcPortfolio}', [ArcportController::class, 'destroy']);
 
-Route::get('/architecture_portfolios/{arcPortfolio}', [ArcportController::class, 'show']);
+Route::get('/architecture_portfolios/{arcPortfolio}', [ArcportController::class, 'show'])->middleware('auth');
 
 
 /* --------------------------------
@@ -111,19 +111,19 @@ Route::get('/architecture_portfolios/{arcPortfolio}', [ArcportController::class,
     ART PORTFOLIO
 
 ---------------------------------*/
-Route::get('/art_portfolios', [ArtportController::class, 'index']);
+Route::get('/art_portfolios', [ArtportController::class, 'index'])->middleware('auth');
 
-Route::get('/art_portfolios/create', [ArtportController::class, 'create']);
+Route::get('/art_portfolios/create', [ArtportController::class, 'create'])->middleware('auth');
 
 Route::post('art_portfolios', [ArtportController::class, 'store']);
 
-Route::get('art_portfolios/{artPortfolio}/edit', [ArtportController::class, 'edit']);
+Route::get('art_portfolios/{artPortfolio}/edit', [ArtportController::class, 'edit'])->middleware('auth');
 
 Route::put('art_portfolios/{artPortfolio}', [ArtportController::class, 'update']);
 
 Route::delete('art_portfolios/{artPortfolio}', [ArtportController::class, 'destroy']);
 
-Route::get('/art_portfolios/{artPortfolio}', [ArtportController::class, 'show']);
+Route::get('/art_portfolios/{artPortfolio}', [ArtportController::class, 'show'])->middleware('auth');
 
 
 
