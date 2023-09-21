@@ -24,7 +24,7 @@
 
       <div class="detail-container">
         <div class="reference-thumbnail">
-          <img src="{{$arcReference->image ? asset('storage/' . $arcReference->image) : asset('/images/house.jpg')}}" alt="" />
+          <img src="{{$arcReference->image}}" alt="" />
         </div>
         <div class="reference-detail">
           <ul>
