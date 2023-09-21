@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ArtPortfolio;
+use Cloudinary;
 
 class ArtportController extends Controller
 {
@@ -31,9 +32,9 @@ class ArtportController extends Controller
             'concept' => 'required',
         ]);
 
-        if ($request->hasFile('thumbnail')) {
-            $formFields['thumbnail'] = $request->file('thumbnail')->store('thumbnails', 'public');
-        }
+        $image_url = Cloudinary::upload($request->file('thumbnail')->getRealPath())->getSecurePath();
+        
+        $formFields['thumbnail'] = $image_url;
         
         $formFields['user_id'] = auth()->id();
         
@@ -63,9 +64,9 @@ class ArtportController extends Controller
             'concept' => 'required',
         ]);
 
-        if ($request->hasFile('thumbnail')) {
-            $formFields['thumbnail'] = $request->file('thumbnail')->store('thumbnails', 'public');
-        }
+        $image_url = Cloudinary::upload($request->file('thumbnail')->getRealPath())->getSecurePath();
+        
+        $formFields['thumbnail'] = $image_url;
 
         $artPortfolio->update($formFields);
 

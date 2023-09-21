@@ -15,7 +15,7 @@
         <a href="/art_references/{{$artReference->id}}" class="reference-item">
           <div  class="thumbnail-pic">
             <img
-              src="{{$artReference->image ? asset('storage/' . $artReference->image) : asset('image/ghiburi_house.jpg')}}"
+              src="{{$artReference->image}}"
               alt="artImg"
             />
           </div>
