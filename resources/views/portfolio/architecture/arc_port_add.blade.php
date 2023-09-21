@@ -14,7 +14,7 @@
           @csrf
           <div class="form-item-account-name">
             <p>Account Name</p>
-            <p>ryokaneko20010424</p>
+            <p>{{auth()->user()->name}}</p>
           </div>
           
           <div class="form-item">
