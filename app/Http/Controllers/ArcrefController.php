@@ -34,10 +34,6 @@ class ArcrefController extends Controller
             'how' => 'required',
             'overview' => 'required',
         ]);
-
-        // if ($request->hasFile('image')) {
-        //     $formFields['image'] = $request->file('image')->store('images', 'public');
-        // }
         
         $image_url = Cloudinary::upload($request->file('image')->getRealPath())->getSecurePath();
         
@@ -65,10 +61,6 @@ class ArcrefController extends Controller
             'how' => 'required',
             'overview' => 'required',
         ]);
-
-        // if ($request->hasFile('image')) {
-        //     $formFields['image'] = $request->file('image')->store('images', 'public');
-        // }
         
         $image_url = Cloudinary::upload($request->file('image')->getRealPath())->getSecurePath();
         

@@ -28,9 +28,6 @@
             
           </div>
         </div>
-        <div class="pagination-ref">
-          
-        </div>
         @endforeach
         {{-- end of each reference --}}
       </div>
