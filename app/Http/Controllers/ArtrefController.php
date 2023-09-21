@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ArtReference;
+use Cloudinary;
 
 class ArtrefController extends Controller
 {
@@ -33,9 +34,9 @@ class ArtrefController extends Controller
             'overview' => 'required',
         ]);
 
-        if ($request->hasFile('image')) {
-            $formFields['image'] = $request->file('image')->store('images', 'public');
-        }
+        $image_url = Cloudinary::upload($request->file('image')->getRealPath())->getSecurePath();
+        
+        $formFields['image'] = $image_url;
         
         $formFields['user_id'] = auth()->id();
         
@@ -60,9 +61,9 @@ class ArtrefController extends Controller
             'overview' => 'required',
         ]);
 
-        if ($request->hasFile('image')) {
-            $formFields['image'] = $request->file('image')->store('images', 'public');
-        }
+        $image_url = Cloudinary::upload($request->file('image')->getRealPath())->getSecurePath();
+        
+        $formFields['image'] = $image_url;
 
         $artReference->update($formFields);
 

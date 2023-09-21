@@ -33,7 +33,7 @@
           <div class="portfolio-item">
             <div class="portfolio-thumbnail">
               <img
-                src="{{$arcPortfolio->thumbnail ? asset('storage/' . $arcPortfolio->thumbnail) : asset('image/ghiburi_house.jpg')}}"
+                src="{{$arcPortfolio->thumbnail}}"
                 alt="picture"
               />
             </div>
@@ -70,7 +70,7 @@
           <div class="portfolio-item">
             <div class="portfolio-thumbnail">
               <img
-                src="{{$artPortfolio->thumbnail ? asset('storage/' . $artPortfolio->thumbnail) : asset('image/ghiburi_house.jpg')}}"
+                src="{{$artPortfolio->thumbnail}}"
                 alt="picture"
               />
             </div>

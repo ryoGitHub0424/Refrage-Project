@@ -11,7 +11,7 @@
 
       <div class="detail-container">
         <div class="reference-thumbnail">
-          <img src="{{$arcPortfolio->thumbnail ? asset('storage/' . $arcPortfolio->thumbnail) : asset('/images/house.jpg')}}" alt="" />
+          <img src="{{$arcPortfolio->thumbnail}}" alt="" />
         </div>
 
         <form class="add-form-items" method="POST" action="/architecture_portfolios/{{$arcPortfolio->id}}" enctype="multipart/form-data">

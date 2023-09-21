@@ -11,7 +11,7 @@
 
       <div class="detail-container">
         <div class="reference-thumbnail">
-          <img src="{{$artPortfolio->thumbnail ? asset('storage/' . $artPortfolio->thumbnail) : asset('/images/stary_night.jpg')}}" alt="" />
+          <img src="{{$artPortfolio->thumbnail}}" alt="" />
         </div>
 
         <form class="add-form-items" method="POST" action="/art_portfolios/{{$artPortfolio->id}}" enctype="multipart/form-data">

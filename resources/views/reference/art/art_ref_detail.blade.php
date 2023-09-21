@@ -23,7 +23,7 @@
       <div class="detail-container">
         <div class="reference-thumbnail">
           <img
-            src="{{$artReference->image ? asset('storage/' . $artReference->image) : asset('/images/stary_night.jpg')}}"
+            src="{{$artReference->image}}"
             alt=""
           />
         </div>
