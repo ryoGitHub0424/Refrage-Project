@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\ArcReference;
 use App\Models\User;
+use Cloudinary;
 
 class ArcrefController extends Controller
 {
@@ -34,9 +35,13 @@ class ArcrefController extends Controller
             'overview' => 'required',
         ]);
 
-        if ($request->hasFile('image')) {
-            $formFields['image'] = $request->file('image')->store('images', 'public');
-        }
+        // if ($request->hasFile('image')) {
+        //     $formFields['image'] = $request->file('image')->store('images', 'public');
+        // }
+        
+        $image_url = Cloudinary::upload($request->file('image')->getRealPath())->getSecurePath();
+        
+        $formFields['image'] = $image_url;
         
         $formFields['user_id'] = auth()->id();
         
@@ -61,9 +66,13 @@ class ArcrefController extends Controller
             'overview' => 'required',
         ]);
 
-        if ($request->hasFile('image')) {
-            $formFields['image'] = $request->file('image')->store('images', 'public');
-        }
+        // if ($request->hasFile('image')) {
+        //     $formFields['image'] = $request->file('image')->store('images', 'public');
+        // }
+        
+        $image_url = Cloudinary::upload($request->file('image')->getRealPath())->getSecurePath();
+        
+        $formFields['image'] = $image_url;
 
         $arcReference->update($formFields);
 
