@@ -11,6 +11,7 @@
       </div>
       <div class="references">
         @foreach ($artReferences as $artReference)
+        
             {{-- each reference --}}
         <a href="/art_references/{{$artReference->id}}" class="reference-item">
           <div  class="thumbnail-pic">
