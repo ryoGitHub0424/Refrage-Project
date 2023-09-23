@@ -15,19 +15,19 @@
         {{-- each reference --}}
 
         @foreach($arcReferences as $arcReference)
-        <div class="reference-item">
-          <a href="/architecture_references/{{$arcReference->id}}" class="thumbnail-pic">
+        <a href="/architecture_references/{{$arcReference->id}}" class="reference-item">
+          <div class="thumbnail-pic">
             <img
               src="{{$arcReference->image}}"
               alt="architectureImg"
             />
-          </a>
+          </div>
           <div class="short-detail">
             <p>Architecture: {{ $arcReference->architecture_name}}</p>
             <p>Architect: {{ $arcReference->architect_name}}</p>
             
           </div>
-        </div>
+        </a>
         @endforeach
         {{-- end of each reference --}}
       </div>
