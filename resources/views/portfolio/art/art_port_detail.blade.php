@@ -17,43 +17,36 @@
             <button class="button delete-btn"> delete </button>
           </form>
         </div>
-        
         @endauth
       </div>
 
-      <section id="portfolio">
-        <a href="art_port_detail.html" class="portfolios-container">
-          <div class="portfolio-item">
-            <div class="portfolio-thumbnail">
-              <img
-                src="{{$artPortfolio->thumbnail}}"
-                alt="picture"
-              />
-            </div>
-            <ul class="port-detail-list">
-              <li>
-                <p>Account Name:</p>
-                <p>{{$artPortfolio->user_name}}</p>
-              </li>
-              <li>
-                <p>Title:</p>
-                <p>{{$artPortfolio->title}}</p>
-              </li>
-              <li>
-                <p>Concept:</p>
-                <p>
-                  {{$artPortfolio->concept}}
-                </p>
-              </li>
-              <li>
-                <p><strong>Portfolio:</strong></p>
-                <p>{{$artPortfolio->file}}</p>
-              </li>
-            </ul>
-          </div>
-        </a>
-        
-      </section>
+      <div class="detail-container">
+        <div class="reference-thumbnail">
+          <img src="{{$artPortfolio->thumbnail}}" alt="" />
+        </div>
+        <div class="reference-detail">
+          <ul>
+            <li>
+              <p><strong>Account Name:</strong></p>
+              <p>{{$artPortfolio->user_name}}</p>
+            </li>
+            <li>
+              <p><strong>Title: </strong></p>
+              <p>{{$artPortfolio->title}}</p>
+            </li>
+            <li>
+              <p><strong>Concept:</strong></p>
+              <p>
+                {{$artPortfolio->concept}}
+              </p>
+            </li>
+            <li>
+              <p><strong>Portfolio:</strong></p>
+              <p>{{$artPortfolio->file}}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
     </main>
 
 @endsection
