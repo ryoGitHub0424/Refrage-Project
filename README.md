@@ -7,7 +7,11 @@ Architecture, Art を学ぶ学生がReferenceの保存とPortfolioの紹介を�
 
 This is a Website for those who learn Architecture, and Art, and want them to be stored as a Reference.
 
+Here is My website...
 Welcome to [Refrage](https://refrage-5b3ea43b7e8e.herokuapp.com/)
+
+If you are interested in my art and drawing...
+Owner's [Art and Drawing Account](https://instagram.com/ryo_drawing_since0424?igshid=YTQwZjQ0NmI0OA==)
 
 ## Background
 多くのArtやArchitectureを学ぶ人がreferenceを探し、各々の制作に使用することが頻繁にある。
