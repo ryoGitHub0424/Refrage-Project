@@ -1,6 +1,6 @@
 # REFRAGE
 
-##　Overview
+## Overview
 Thank you for visiting us!!
 
 Architecture, Art を学ぶ学生がReferenceの保存とPortfolioの紹介を目的としたサイトです。
