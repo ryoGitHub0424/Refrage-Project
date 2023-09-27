@@ -1,66 +1,49 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# REFRAGE
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+##　Overview
+Thank you for visiting us!!
 
-## About Laravel
+Architecture, Art を学ぶ学生がReferenceの保存とPortfolioの紹介を目的としたサイトです。
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This is a Website for those who learn Architecture, and Art, and want them to be stored as a Reference.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Welcome to [Refrage](https://refrage-5b3ea43b7e8e.herokuapp.com/)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Background
+多くのArtやArchitectureを学ぶ人がreferenceを探し、各々の制作に使用することが頻繁にある。
 
-## Learning Laravel
+自分の日常の中で、他の人の建築や美術館,Pinterest で見つけたものを思い出せないことがそのアンチドーテとしてこのwebsiteの案に至った。
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Referenceの保存以外にも他の人の作品をみて、刺激し合い、アイデアを共有することのできるようなプラットフォームをつくことがきると美しい空間になるのではないかと思ったことがきっかけだった。
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Function
+- CRUD
+- Authentification (Login, Logout)
+- 画像のアップロード表示（Cloudinary）
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Useful Point
+- Loginしたuserのみが使えるreference保存, portfolio保存のプラットフォーム
+- 他の人が創作したportfolioの閲覧が可能。
+- 投稿する際にサムネイルとしてイメージを乗せるととに、urlやpdfを張ることで自分のportfolioを見せることがきる。
 
-## Laravel Sponsors
+## Development
+### Languages
+- PHP
+- JavaScript
+- HTML
+- CSS
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### Environment
+- Laravel9
+- AWS(EC2 + Cloud9)
+- MySql(MariaDB)
+- GitHub
 
-### Premium Partners
+### Deploy
+- Heroku
+- 
+## Inprovable Points for the future
+- チャット機能の実装（ポートフォリオの作成者とその作品に興味をもった人が直接的に連絡を取ることができれば様々な期間が生まれる）
+- フォロー機能、いいね機能の実装（自分のフォローした人の投稿を優先的に表示など）
+- AIの導入（自分のみていた投稿の系統を優勢的に表示、関連投稿の表示）
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
